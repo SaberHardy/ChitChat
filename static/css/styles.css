@@ -15,8 +15,8 @@ body {
     margin-top: 100px;
 }
 
-.two-divs{
-    background-color: aquamarine;
+.two-divs {
+    background-color: #ffffff;
 }
 
 .left-side {
@@ -25,11 +25,12 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .left-side {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: linear-gradient(
             to bottom,
             #007bff,
@@ -38,7 +39,7 @@ body {
 }
 
 .chit-chat-title {
-  font-size: 70px;
+    font-size: 70px;
     font-weight: bolder;
 }
 
@@ -47,12 +48,12 @@ body {
 }
 
 .enjoy-text {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 .privacy-text {
     margin-top: auto;
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .image-logo {
@@ -61,5 +62,40 @@ body {
 }
 
 .right-side {
-    background-color: aqua;
+    text-align: center;
+}
+
+.custom-width {
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+}
+
+.two-divs .col-4,
+.two-divs .col-8 {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow to both columns */
+    padding: 20px; /* Add padding for better shadow visibility */
+}
+
+.two-divs .col-4 {
+    border-radius: 40px;
+}
+
+.bi-box-arrow-in-right {
+    margin-left: 10px;
+}
+
+.register {
+    margin-top: 30px;
+}
+.register a {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 40px;
 }
