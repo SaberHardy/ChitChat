@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6eff8;
+}
+
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.two-divs{
+    background-color: aquamarine;
+}
+
+.left-side {
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    background: linear-gradient(
+            to bottom,
+            #007bff,
+            #ffffff);
+    height: 700px;
+}
+
+.chit-chat-title {
+  font-size: 70px;
+    font-weight: bolder;
+}
+
+.chit-chat-title span {
+    color: white;
+}
+
+.enjoy-text {
+  font-size: 18px;
+}
+
+.privacy-text {
+    margin-top: auto;
+  font-size: 14px;
+}
+
+.image-logo {
+    width: 500px;
+    height: 350px;
+}
+
+.right-side {
+    background-color: aqua;
+}

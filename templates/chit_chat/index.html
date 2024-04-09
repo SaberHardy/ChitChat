@@ -1,0 +1,20 @@
+{% extends 'partials/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row two-divs">
+            <div class="col-4 left-side d-flex align-items-center justify-content-center">
+                <p class="chit-chat-title">
+                    Chit<span>Chat</span>
+                </p>
+                <img src="{{ url_for('static', filename="imgs/logo_image.png") }}" class="image-logo">
+                <p class="enjoy-text">ENJOY!</p>
+                <p class="privacy-text">Privacy policy and terms of service!</p>
+            </div>
+
+            <div class="col-8 right-side">
+                TWO
+            </div>
+        </div>
+    </div>
+{% endblock %}
