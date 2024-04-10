@@ -4,7 +4,7 @@
 > 
 > set FLASK_ENV=development
 > 
-> set FLASK_APP=main.py
+> set FLASK_APP=application_name.py
 > 
 > flask run
 
@@ -12,7 +12,7 @@
 > 
 > export FLASK_ENV=development 
 > 
-> export FLASK_APP=main.py 
+> export FLASK_APP=application_name.py 
 > flask run
 
 > ------------- Server Error -------------
@@ -23,7 +23,7 @@
 > 
 > Run in the terminal ( in mac run python3, in windows run 'py')
 > 
-> from main import db, app 
+> from app_name import db, app 
 > 
 > app.app_context().push() 
 > 
@@ -61,6 +61,12 @@
 > flask db migrate -m 'initial migration' 
 > 
 > flask db upgrade
+
+>> NOTE: in case you have a prblm like this:
+> ERROR [flask_migrate] Error: Can't locate revision identified by 'ee6db864e433'
+> 
+> Run this:  
+> flask db revision --rev-id ee6db864e433
 
 Run server and check
 
