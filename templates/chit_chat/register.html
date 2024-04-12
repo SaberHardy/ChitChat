@@ -1,7 +1,6 @@
 {% extends 'partials/base.html' %}
 
 {% block content %}
-
     <div class="container">
         <div class="row two-divs my-5">
             <div class="col-4 left-side d-flex align-items-center justify-content-center">
@@ -15,37 +14,53 @@
 
             <div class="col-8 right-side d-flex flex-column align-items-center justify-content-center">
                 <img src="{{ url_for('static', filename="imgs/logo_image.png") }}" class="image-logo mb-4">
-                <form action="" method="post">
+                <form action="{{ url_for('register') }}" method="post">
                     <div class="input-group mb-3">
-                        <span class="input-group-text">
-                            <i class="bi bi-envelope-fill"></i>
-                        </span>
-                            <input type="text" class="form-control input-sm custom-width" placeholder="Email" required>
+                    <span class="input-group-text">
+                        <i class="bi bi-envelope-fill"></i>
+                    </span>
+                        <input type="text" class="form-control input-sm custom-width" placeholder="Email" name="email"
+                               required>
+                    </div>
+
+                    <div class="input-group mb-3">
+                    <span class="input-group-text">
+                        <i class="bi bi-person"></i>
+                    </span>
+                        <input type="text" class="form-control input-sm custom-width" placeholder="Username"
+                               name="username" required>
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text">
-                            <i class="bi bi-person"></i>
-                        </span>
-                            <input type="text" class="form-control input-sm custom-width" placeholder="Username" required>
+                    <span class="input-group-text">
+                        <i class="bi bi-person"></i>
+                    </span>
+                        <input type="text" class="form-control input-sm custom-width" placeholder="name"
+                               name="name" required>
                     </div>
+
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
                         <input type="password" class="form-control input-sm custom-width" placeholder="Password"
-                               required>
+                               name="password" required>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
                         <input type="password" class="form-control input-sm custom-width" placeholder="Repeat Password"
-                               required>
+                               name="repeat_password" required>
                     </div>
+                    <!-- Error handling -->
+                    {% if error %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ error }}
+                        </div>
+                    {% endif %}
                     <div class="text-center">
-                        <a type="submit" class="btn btn-success btn-sm">
+                        <button type="submit" class="btn btn-success btn-sm">
                             Register
                             <i class="bi bi-box-arrow-in-right"></i>
-                        </a>
+                        </button>
                     </div>
-                    <p class="register">You already Have an Account?
-                        <a href="{{ url_for('login_user') }}">Login!</a>
+                    <p class="register">You already have an account? <a href="{{ url_for('login') }}">Login!</a>
                     </p>
                 </form>
             </div>
