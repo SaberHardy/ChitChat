@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #e6eff8;
+    background-color: #222431;
 }
 
 
@@ -134,4 +134,501 @@ body {
 .welcome-logo {
     margin-left: 20px;
     background-color: burlywood;
+}
+
+.desktop-3 .container {
+    margin: 0 10px 20px 26px;
+    display: flex;
+    flex-direction: row;
+    width: 339px;
+    box-sizing: border-box;
+}
+
+.desktop-3 .atomic {
+    margin: 13px 0 15px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.desktop-3 .group-22 {
+    margin: 0 0 15px 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 303.7px;
+    box-sizing: border-box;
+}
+
+.desktop-3 .ellipse-3 {
+    margin-right: 17px;
+    width: 56px;
+    height: 53px;
+}
+
+.desktop-3 .evan-blint {
+    margin: 15px 0 9px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.desktop-3 .min {
+    margin: 22px 0 13px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+.desktop-3 .group-23 {
+    margin: 0 2px 19px 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 303.7px;
+    box-sizing: border-box;
+}
+
+.desktop-3 .ellipse-31 {
+    margin-right: 17px;
+    width: 56px;
+    height: 53px;
+}
+
+.desktop-3 .evan-blint-1 {
+    margin: 15px 0 9px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.desktop-3 .min-1 {
+    margin: 22px 0 13px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+.desktop-3 .groups-that-you-have-joined {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.desktop-3 .online {
+    position: relative;
+    margin: 1px 14.5px 0 0;
+    display: inline-block;
+    width: 282.5px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.desktop-3 .ellipse-4 {
+    position: absolute;
+    top: 7px;
+    right: 26px;
+    width: 47px;
+    height: 40px;
+}
+
+.desktop-3 .container {
+    position: relative;
+    margin-bottom: 1px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #444242;
+}
+
+.desktop-3 .group-21 {
+    margin: 0 17.6px 15px 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 288.2px;
+    box-sizing: border-box;
+}
+
+.desktop-3 .group-20 {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.desktop-3 .ellipse-32 {
+    margin-right: 17.3px;
+    width: 56.9px;
+    height: 53px;
+}
+
+.desktop-3 .evan-blint-2 {
+    margin: 15px 0 9px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.desktop-3 .ellipse-6 {
+    margin: 26px 0 15px 0;
+    width: 10.2px;
+    height: 12px;
+}
+
+.desktop-3 .group-24 {
+    margin-right: 17.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 289.2px;
+    box-sizing: border-box;
+}
+
+.desktop-3 .group-201 {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.desktop-3 .ellipse-33 {
+    margin-right: 17.3px;
+    width: 56.9px;
+    height: 53px;
+}
+
+.desktop-3 .evan-blint-3 {
+    margin: 15px 0 9px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.desktop-3 .ellipse-61 {
+    margin: 26px 0 15px 0;
+    width: 10.2px;
+    height: 12px;
+}
+
+.desktop-3 .group-211 {
+    margin-left: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 288.2px;
+    box-sizing: border-box;
+}
+
+.desktop-3 .group-202 {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.desktop-3 .ellipse-34 {
+    margin-right: 17.3px;
+    width: 56.9px;
+    height: 53px;
+}
+
+.desktop-3 .evan-blint-4 {
+    margin: 15px 0 9px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.desktop-3 .ellipse-62 {
+    margin: 26px 0 15px 0;
+    width: 10.2px;
+    height: 12px;
+}
+
+.desktop-3 .rectangle-11 {
+    border-radius: 100px;
+    background: #D9D9D9;
+    margin-bottom: 81px;
+    width: 16px;
+    height: 331px;
+}
+
+.desktop-3 .you-are-welcome-here {
+    margin-bottom: 45px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 40px;
+    color: #000000;
+}
+
+.desktop-3 .tws-without-background-2 {
+    background: url('../assets/images/twsWithoutBackground2.png') 50% / cover no-repeat;
+    margin: 0 0.7px 34px 0;
+    width: 389px;
+    height: 446px;
+}
+
+.desktop-3 .enjoy {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid #000000;
+    margin-right: 1.6px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 64px;
+    color: #000000;
+}
+
+.desktop-3 {
+    background: radial-gradient(97.07% 97.07% at 57.01% 97.07%, rgba(59, 132, 185, 0.66) 2.62%, rgba(0, 19, 113, 0.66) 88.16%, rgba(0, 13, 75, 0.66) 100%);
+    display: flex;
+    flex-direction: row;
+    padding: 23px 23px 22px 23px;
+    width: 1440px;
+    box-sizing: border-box;
+}
+
+.desktop-3 .group-14 {
+    position: relative;
+    margin: 0 0 15px 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    padding: 29px 19.2px 30px 14px;
+    box-sizing: border-box;
+}
+
+.desktop-3 .ellipse-1 {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    translate: -50% 0;
+    width: 90px;
+    height: 88px;
+}
+
+.desktop-3 .logo {
+    position: relative;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+}
+
+.desktop-3 .looking-for {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #7B7575;
+}
+
+.desktop-3 .group-17 {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+    width: fit-content;
+    box-sizing: border-box;
+}
+
+.desktop-3 .ellipse-2 {
+    margin-right: 17px;
+    width: 58px;
+    height: 57px;
+}
+
+.desktop-3 .science {
+    margin: 13px 0 15px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.desktop-3 .group-15 {
+    margin-right: 11.5px;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+}
+
+.desktop-3 .ellipse-21 {
+    margin-right: 17px;
+    width: 58px;
+    height: 57px;
+}
+
+.desktop-3 .group-26 {
+    border-radius: 30px;
+    background: #D9D9D9;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 92px 0 237px 0;
+    width: 1010px;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.desktop-3 .group-27 {
+    margin: 0 3px 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 303.7px;
+    box-sizing: border-box;
+}
+
+.desktop-3 .ellipse-35 {
+    margin-right: 17px;
+    width: 56px;
+    height: 53px;
+}
+
+.desktop-3 .evan-blint-5 {
+    margin: 15px 0 9px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.desktop-3 .min-2 {
+    margin: 22px 0 13px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+.desktop-3 .left-side-online {
+    border-radius: 30px;
+    background: #353A5B;
+    position: relative;
+    margin: 0 9px 1px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 0 33px 0;
+    box-sizing: border-box;
+}
+
+.desktop-3 .group-28 {
+    background: #536381;
+    position: relative;
+    margin-bottom: 11px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 0 13px 21px;
+    width: 375px;
+    box-sizing: border-box;
+}
+
+.desktop-3 .group-29 {
+    background: #536381;
+    position: relative;
+    margin-bottom: 19px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 13px 36.9px 13px 20px;
+    box-sizing: border-box;
+}
+
+.desktop-3 .group-30 {
+    border-radius: 20px;
+    background: #CACACA;
+    position: relative;
+    margin: 0 26px 55px 20px;
+    padding: 10px 15px 14px 15px;
+    width: fit-content;
+    box-sizing: border-box;
+}
+
+.desktop-3 .container-1 {
+    margin: 0 1px 14px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 288.2px;
+    box-sizing: border-box;
+}
+
+.desktop-3 .container-2 {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.desktop-3 .container-3 {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+}
+
+.desktop-3 .container-4 {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.desktop-3 .container-5 {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.desktop-3 .container-6 {
+    margin: 16px 16.3px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 306.7px;
+    height: fit-content;
+    box-sizing: border-box;
 }

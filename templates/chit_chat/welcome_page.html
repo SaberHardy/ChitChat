@@ -1,27 +1,120 @@
 {% extends 'partials/base.html' %}
 
 {% block content %}
-    {% for user in all_us %}
-        {{ user.username }}
-    {% endfor %}
     {% if current_user.is_authenticated %}
-        <h2>You are welcome: {{ current_user.username }}</h2>
-
-        <div class="main-container mx-5">
-            <div class="row">
-                <div class="welcome-online-users">
-                    <div class="col-4 online-users">
-                        <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}" class="logo-user"
-                             height="100">
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+        <div class="desktop-3">
+            <div class="left-side-online">
+                <div class="group-14">
+                    <img class="ellipse-1" src="../assets/vectors/ellipse11_x2.svg"/>
+                    <span class="logo">Logo43</span>
+                </div>
+                <input class="" type="text" placeholder="Looking for..">
+                <div class="group-28">
+                    <img class="ellipse-4" src="../assets/vectors/ellipse41_x2.svg"/>
+                    <div class="online">
+                        Online
                     </div>
-
-                    <div class="col-8 welcome-logo">
-                        <p class="welcome-here">You are Welcomed Here!</p>
-                        <img src="{{ url_for('static', filename='imgs/logo_image.png') }}">
-                        <h1 class="enjoy-text">ENJOY!</h1>
+                    <div class="container">
+                        3
                     </div>
                 </div>
+                <div class="container">
+                    <div class="container-6">
+                        <div class="group-22">
+                            <div class="container-4">
+                                <img class="ellipse-3" src="../assets/vectors/ellipse31_x2.svg"/>
+                                <div class="evan-blint">
+                                    Evan Blint
+                                </div>
+                            </div>
+                            <div class="min">
+                                10min
+                            </div>
+                        </div>
+                        <div class="group-23">
+                            <div class="container-5">
+                                <img class="ellipse-31" src="../assets/vectors/ellipse35_x2.svg"/>
+                                <div class="evan-blint-1">
+                                    Evan Blint
+                                </div>
+                            </div>
+                            <div class="min-1">
+                                10min
+                            </div>
+                        </div>
+                        <div class="group-27">
+                            <div class="container-2">
+                                <img class="ellipse-35" src="../assets/vectors/ellipse38_x2.svg"/>
+                                <div class="evan-blint-5">
+                                    Evan Blint
+                                </div>
+                            </div>
+                            <div class="min-2">
+                                10min
+                            </div>
+                        </div>
+                        <div class="group-21">
+                            <div class="group-20">
+                                <img class="ellipse-32" src="../assets/vectors/ellipse311_x2.svg"/>
+                                <div class="evan-blint-2">
+                                    Evan Blint
+                                </div>
+                            </div>
+                            <img class="ellipse-6" src="../assets/vectors/ellipse6_x2.svg"/>
+                        </div>
+                        <div class="group-24">
+                            <div class="container-1">
+                                <div class="group-201">
+                                    <img class="ellipse-33" src="../assets/vectors/ellipse37_x2.svg"/>
+                                    <div class="evan-blint-3">
+                                        Evan Blint
+                                    </div>
+                                </div>
+                                <img class="ellipse-61" src="../assets/vectors/ellipse64_x2.svg"/>
+                            </div>
+                            <div class="group-211">
+                                <div class="group-202">
+                                    <img class="ellipse-34" src="../assets/vectors/ellipse310_x2.svg"/>
+                                    <div class="evan-blint-4">
+                                        Evan Blint
+                                    </div>
+                                </div>
+                                <img class="ellipse-62" src="../assets/vectors/ellipse63_x2.svg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rectangle-11">
+                    </div>
+                </div>
+                <div class="group-29">
+      <span class="groups-that-you-have-joined">
+        Groups that you have joined
+      </span>
+                </div>
+                <div class="group-17">
+                    <div class="container-3">
+                        <img class="ellipse-2" src="../assets/vectors/ellipse2_x2.svg"/>
+                        <div class="science">
+                            Science
+                        </div>
+                    </div>
+                    <div class="group-15">
+                        <img class="ellipse-21" src="../assets/vectors/ellipse23_x2.svg"/>
+                        <div class="atomic">
+                            Atomic
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group-26">
+                <div class="you-are-welcome-here">
+                    You are Welcome Here !
+                </div>
+                <div class="tws-without-background-2">
+                </div>
+                <span class="enjoy">
+      ENJOY !
+    </span>
             </div>
         </div>
     {% else %}
