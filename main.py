@@ -67,7 +67,7 @@ def login():
 def logout():
     logout_user()
     # flash("You Have Been Logged Out!")
-    return redirect(url_for('/'))
+    return redirect(url_for('login'))
 
 
 @app.route('/welcome', methods=['GET', 'POST'])
