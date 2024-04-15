@@ -51,7 +51,7 @@ def login():
                 login_user(user)
 
                 # flash("Login Succesfull!!")
-                return redirect(url_for('all_users'))
+                return redirect(url_for('welcome'))
             else:
                 print('Wrong Password - Try Again!')
                 # flash("Wrong Password - Try Again!")
