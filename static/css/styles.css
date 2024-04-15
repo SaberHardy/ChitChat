@@ -6,9 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #e6eff8;
+    background-color: #222431;
 }
-
 
 /*.container {*/
 /*    text-align: center;*/
@@ -64,9 +63,6 @@ body {
     text-align: center;
 }
 
-.custom-width {
-}
-
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -108,30 +104,102 @@ body {
 
 .main-container {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    height: 100vh; /* Make the container full height of the viewport */
+    margin-top: 30px;
+    align-items: center;
+    border-radius: 10px;
+    background-image: linear-gradient(
+            to bottom right,
+            #516df8,
+            #61bdde);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    height: 800px;
+
 }
 
-.welcome-online-users {
+.left-user-logo {
     display: flex;
-    flex: 1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Apply box-shadow */
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #a8aece;
+    margin: 10px;
+    border-radius: 10px;
 }
 
-.online-users, .welcome-logo {
-    flex: 1;
+.left-user-logo img {
+    width: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.left-user-logo input {
+    width: 400px;
+    height: 40px;
     padding: 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.right-side-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Added */
+}
+
+input[type=text] {
+    box-sizing: border-box;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    /*padding: 12px 20px 12px 40px;*/
 }
 
 .online-users {
-    display: inline-block;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
     align-items: center;
-    background-color: #91e791;
+    background-color: green;
+    border-radius: 10px;
+    padding: 8px;
 }
 
-.welcome-logo {
-    margin-left: 20px;
-    background-color: burlywood;
+.online-users span {
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+/*Start with users info*/
+.users-online-info {
+    width: 100%;
+}
+
+.info-users {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.img-full-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.img-full-name p {
+    margin-left: 10px;
+}
+
+.info-users p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
 }
