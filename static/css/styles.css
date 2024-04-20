@@ -109,8 +109,8 @@ body {
     border-radius: 10px;
     background-image: linear-gradient(
             to bottom right,
-            #516df8,
-            #61bdde);
+            #20222c,
+            #0c5e79);
     box-shadow: 0px 0px 10px rgb(255, 255, 255);
     height: 800px;
 
@@ -120,15 +120,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 95%;
     padding: 20px;
-    background-color: #a8aece;
+    background-color: #1b1c21;
     margin: 10px;
     border-radius: 10px;
 }
 
 .left-user-logo img {
-    width: 60px;
+    width: 50px;
     border-radius: 50%;
+}
+
+.user-logo-img {
     margin-bottom: 20px;
 }
 
@@ -145,6 +149,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center; /* Added */
+    background-color: white;
+    height: 95%;
+    border-radius: 20px;
+    width: 70%;
 }
 
 input[type=text] {
@@ -164,7 +172,7 @@ input[type=text] {
     width: 100%;
     margin-top: 20px;
     align-items: center;
-    background-color: green;
+    background-color: #49494d;
     border-radius: 10px;
     padding: 8px;
 }
@@ -177,6 +185,7 @@ input[type=text] {
 /*Start with users info*/
 .users-online-info {
     width: 100%;
+    overflow: auto;
 }
 
 .info-users {
@@ -193,8 +202,17 @@ input[type=text] {
     margin-top: 10px;
 }
 
+.img-full-name img {
+    border-radius: 50%;
+}
+
 .img-full-name p {
     margin-left: 10px;
+    color: white;
+}
+
+.info-users span {
+    color: white;
 }
 
 .info-users p {
@@ -202,4 +220,18 @@ input[type=text] {
     justify-content: center;
     align-items: center;
     margin-right: 10px;
+}
+
+.bi-circle-fill {
+    color: greenyellow;
+}
+
+.right-side-logo p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.right-side-logo span {
+    color: orange;
+    font-weight: bolder;
 }
