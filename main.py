@@ -1,14 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_login import current_user, login_required, LoginManager, login_user, logout_user
-from flask_sqlalchemy import SQLAlchemy
 
 from forms.forms import LoginForm
-from models.models import UsersModel, db
-from flask_wtf.csrf import CSRFProtect
-from werkzeug.security import generate_password_hash, check_password_hash
-from flask_bcrypt import Bcrypt
+from models.models import UsersModel, db  # , MessagesModel
+from werkzeug.security import check_password_hash
 from flask_migrate import Migrate
-import os
 
 app = Flask(__name__, template_folder='templates')
 
@@ -25,7 +21,6 @@ login_manager.init_app(app)
 db.init_app(app)
 
 migrate = Migrate(app, db)
-
 
 login_manager = LoginManager()
 login_manager.init_app(app=app)
@@ -114,6 +109,42 @@ def register():
 def all_users():
     all_us = UsersModel.query.all()
     return render_template('chit_chat/all_users.html', all_us=all_us)
+
+
+# @app.route('/send_message', methods=['POST'])
+# @login_required
+# def send_message():
+#     sender_id = current_user.id
+#     receiver_id = request.form['receiver_id']
+#     message_content = request.form['message_content']
+#
+#     new_message = MessagesModel(sender_id=sender_id,
+#                                 receiver_id=receiver_id,
+#                                 message_content=message_content)
+#
+#     db.session.add(new_message)
+#     db.session.commit()
+#
+#     # Optionally, send real-time notification to the receiver
+#
+#     return redirect(url_for('chat_with_users'))
+#
+#
+# @app.route('/get_messages/<int:receiver_id>', methods=['GET'])
+# @login_required
+# def get_messages(receiver_id):
+#     messages = MessagesModel.query.filter(
+#         ((MessagesModel.sender_id == current_user.id) & (MessagesModel.receiver_id == receiver_id)) |
+#         ((MessagesModel.sender_id == receiver_id) & (MessagesModel.receiver_id == current_user.id))
+#     ).order_by(MessagesModel.timestamp).all()
+#
+#     # Optionally, mark messages as read
+#
+#     return render_template('chit_chat/messages.html', messages=messages)
+
+@app.route('/chat_users', methods=['POST', 'GET'])
+def chat_users():
+    return render_template('chit_chat/chat_users.html')
 
 
 if __name__ == '__main__':
