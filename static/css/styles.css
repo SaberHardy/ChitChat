@@ -252,3 +252,54 @@ input[type=text] {
 .users-online-info::-webkit-scrollbar {
     background-color: transparent;
 }
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95%;
+    width: 600px;
+    padding: 20px;
+    background-color: rgba(47, 47, 61, 0.88);
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.profile-section img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.profile-section .user-logo-img {
+    margin-bottom: 20px;
+}
+
+.link-user {
+    text-decoration: none;
+    font-size: 35px;
+    padding: 10px;
+}
+
+.icon-circle {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.settings-add-user {
+    display: flex;
+    gap: 50px;
+}
+
+.shared_files {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.shared_files p {
+    color: white;
+    font-size: 20px;
+}

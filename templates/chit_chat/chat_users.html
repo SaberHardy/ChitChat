@@ -144,12 +144,34 @@
             </div>
 
             <div class="right-side-logo">
-                <p class="">You are welcome {{ current_user.username|title }}!</p>
-                <img src="{{ url_for('static', filename='imgs/logo_image.png') }}">
-                <p>This platform is made by <span>TWS</span></p>
+                <p>Create chat between users</p>
             </div>
 
+            <div class="profile-section">
+                <img class="user-logo-img" src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
+                <div class="settings-add-user">
+                    <a class="link-user" href="">
+                        <i class="bi bi-plus-circle icon-circle"></i>
+                    </a>
+                    <a class="link-user" href="">
+                        <i class="bi bi-gear-wide-connected icon-circle"></i>
+                    </a>
+                </div>
+                <div class="online-users">
+                    <span>Shared Files</span>
+                    <span>20</span>
+                </div>
 
+                <div class="">
+                    <div class="shared_files">
+                        <p class="text-center">daily_basis_for_time.pdf</p>
+                        <p class="text-center">daily_basis_for_time.pdf</p>
+                        <p class="text-center">daily_basis_for_time.pdf</p>
+                        <p class="text-center">daily_basis_for_time.pdf</p>
+                        <p class="text-center">daily_basis_for_time.pdf</p>
+                    </div>
+                </div>
+            </div>
         </div>
     {% else %}
         <h2>You are welcome: {{ current_user.username }}</h2>
