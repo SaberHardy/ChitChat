@@ -9,6 +9,10 @@ body {
     background-color: #222431;
 }
 
+body, html {
+
+}
+
 /*.container {*/
 /*    text-align: center;*/
 /*    margin-top: 100px;*/
@@ -104,11 +108,11 @@ body {
 
 .main-container {
     /*width: 100vw;*/
-    height: 100vh;
+    height: 90vh;
     display: flex;
     margin-top: 30px;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 20px;
     background-image: linear-gradient(
             to bottom right,
             #20222c,
@@ -122,9 +126,9 @@ body {
     align-items: center;
     height: 95%;
     padding: 20px;
-    background-color: #1b1c21;
+    background-color: rgba(47, 47, 61, 0.88);
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .left-user-logo img {
@@ -172,7 +176,7 @@ input[type=text] {
     width: 100%;
     margin-top: 20px;
     align-items: center;
-    background-color: #49494d;
+    background-color: #cccccc;
     border-radius: 10px;
     padding: 8px;
 }
@@ -232,11 +236,19 @@ input[type=text] {
 }
 
 .right-side-logo p {
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
 }
 
 .right-side-logo span {
     color: orange;
     font-weight: bolder;
+}
+
+.right-side-logo img {
+    width: 70%;
+}
+
+.users-online-info::-webkit-scrollbar {
+    background-color: transparent;
 }
