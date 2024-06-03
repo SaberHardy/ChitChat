@@ -148,5 +148,10 @@ def chat_users():
     return render_template('chit_chat/chat_users.html')
 
 
+@app.route('/user_profile/<user_id>', methods=['POST', 'GET'])
+def user_profile(user_id):
+    return render_template('chit_chat/user_profile.html')
+
+
 if __name__ == '__main__':
     app.run()

@@ -9,7 +9,7 @@
                  onclick="toggleDropdown()">
             <div id="dropdownMenu" class="dropdown-content">
                 {% if current_user.is_authenticated %}
-                <a href="#">Profile</a>
+                <a href="{{ url_for('user_profile', user_id=current_user.id) }}">Profile</a>
                 <a href="#">Settings</a>
                 <a href="{{ url_for('logout') }}">Logout</a>
                 {% endif %}
@@ -28,7 +28,7 @@
             <div class="info-users">
                 <div class="img-full-name">
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <a href="" class="full-name-tag">{{ user.username }}</a>
+                    <a href="" class="full-name-tag">{{ user.username }} {{ user.id }}</a>
                 </div>
                 <i class="bi bi-circle-fill"></i>
             </div>

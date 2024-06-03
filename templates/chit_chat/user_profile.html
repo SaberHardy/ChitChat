@@ -1,0 +1,33 @@
+{% extends 'partials/base.html' %}
+
+{% block content %}
+{% if current_user.is_authenticated %}
+<div class="profile-container">
+    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}" alt="Profile Picture">
+    <div class="profile-info">
+        <h2>{{ current_user.username|title }}</h2>
+        <p>{{ current_user.email|upper }}</p>
+    </div>
+    <div class="profile-details">
+        <div>
+            <span>Phone Number:</span>
+            <p>(123) 456-7890</p>
+        </div>
+        <div>
+            <span>Street Address:</span>
+            <p>123 Main St</p>
+        </div>
+        <div>
+            <span>City, State, ZIP:</span>
+            <p>Springfield, IL 62701</p>
+        </div>
+        <div>
+            <span>Date of Birth:</span>
+            <p>January 1, 1990</p>
+        </div>
+    </div>
+    <a href="{{ url_for('welcome') }}" class="btn btn-info">Back Home</a>
+</div>
+
+{% endif %}
+{% endblock %}
