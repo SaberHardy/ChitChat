@@ -67,7 +67,8 @@ def logout():
 
 @app.route('/welcome', methods=['GET', 'POST'])
 def welcome():
-    return render_template('chit_chat/welcome_page.html')
+    all_users = UsersModel.query.all()
+    return render_template('chit_chat/welcome_page.html', all_users=all_users)
 
 
 @app.route('/register', methods=['GET', 'POST'])

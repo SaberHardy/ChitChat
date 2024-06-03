@@ -24,92 +24,16 @@
         </div>
 
         <div class="users-online-info">
+            {% for user in all_users %}
             <div class="info-users">
                 <div class="img-full-name">
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p class="text-center">full name</p>
+                    <a href="" class="full-name-tag">{{ user.username }}</a>
                 </div>
                 <i class="bi bi-circle-fill"></i>
             </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p>full name</p>
-                </div>
-                <span>13 min</span>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p class="text-center">full name</p>
-                </div>
-                <i class="bi bi-circle-fill"></i>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p>full name</p>
-                </div>
-                <span>13 min</span>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p class="text-center">full name</p>
-                </div>
-                <i class="bi bi-circle-fill"></i>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p>full name</p>
-                </div>
-                <span>13 min</span>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p class="text-center">full name</p>
-                </div>
-                <i class="bi bi-circle-fill"></i>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p>full name</p>
-                </div>
-                <span>13 min</span>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p class="text-center">full name</p>
-                </div>
-                <i class="bi bi-circle-fill"></i>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p>full name</p>
-                </div>
-                <span>13 min</span>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p class="text-center">full name</p>
-                </div>
-                <i class="bi bi-circle-fill"></i>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p>full name</p>
-                </div>
-                <span>13 min</span>
-            </div>
+            {% endfor %}
         </div>
-
         <div class="online-users">
             <span>Groups</span>
             <span>dd</span>

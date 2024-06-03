@@ -11,7 +11,6 @@ function toggleDropdown() {
 // Hide the dropdown menu when clicking outside of it
 window.onclick = function(event) {
     if (!event.target.matches('.user-logo-img')) {
-    console.log("tihi", event.target.matches('.user-logo-img'))
         var dropdowns = document.getElementsByClassName("dropdown-content");
         for (var i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
