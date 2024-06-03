@@ -9,8 +9,8 @@
                  onclick="toggleDropdown()">
             <div id="dropdownMenu" class="dropdown-content">
                 {% if current_user.is_authenticated %}
-                <a href="{{ url_for('logout') }}">Profile</a>
-                <a href="{{ url_for('logout') }}">Settings</a>
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
                 <a href="{{ url_for('logout') }}">Logout</a>
                 {% endif %}
             </div>
