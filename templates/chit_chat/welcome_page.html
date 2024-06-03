@@ -4,7 +4,17 @@
 {% if current_user.is_authenticated %}
 <div class="main-container mx-5 my-5">
     <div class="left-user-logo">
-        <img class="user-logo-img" src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
+        <div class="dropdown">
+            <img class="user-logo-img" src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}"
+                 onclick="toggleDropdown()">
+            <div id="dropdownMenu" class="dropdown-content">
+                {% if current_user.is_authenticated %}
+                <a href="{{ url_for('logout') }}">Profile</a>
+                <a href="{{ url_for('logout') }}">Settings</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+                {% endif %}
+            </div>
+        </div>
         <form class="form-inline" method="post">
             <input type="text" name="search" placeholder="Search..">
         </form>
