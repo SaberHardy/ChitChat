@@ -30,7 +30,11 @@
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
                     <a href="" class="full-name-tag">{{ user.username }} {{ user.id }}</a>
                 </div>
-                <i class="bi bi-circle-fill"></i>
+                {% if user.connected %}
+                <i class="bi bi-circle-fill online-circle"></i>
+                {% else %}
+                <i class="bi bi-circle-fill offline-circle"></i>
+                {% endif%}
             </div>
             {% endfor %}
         </div>
@@ -44,35 +48,35 @@
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
                     <p>Group Name</p>
                 </div>
-                <i class="bi bi-circle-fill"></i>
+                <span>3</span>
             </div>
             <div class="info-users">
                 <div class="img-full-name">
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
                     <p>Group Name</p>
                 </div>
-                <i class="bi bi-circle-fill"></i>
+                <span>245</span>
             </div>
             <div class="info-users">
                 <div class="img-full-name">
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
                     <p>Group Name</p>
                 </div>
-                <i class="bi bi-circle-fill"></i>
+                <span>24</span>
             </div>
             <div class="info-users">
                 <div class="img-full-name">
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
                     <p>Group Name</p>
                 </div>
-                <i class="bi bi-circle-fill"></i>
+                <span>30</span>
             </div>
             <div class="info-users">
                 <div class="img-full-name">
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
                     <p>Group Name</p>
                 </div>
-                <i class="bi bi-circle-fill"></i>
+                <span>2998</span>
             </div>
         </div>
     </div>

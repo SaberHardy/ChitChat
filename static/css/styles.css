@@ -257,7 +257,10 @@ input[type=text] {
     margin-right: 10px;
 }
 
-.bi-circle-fill {
+.offline-circle {
+    color: red;
+}
+.online-circle {
     color: greenyellow;
 }
 
