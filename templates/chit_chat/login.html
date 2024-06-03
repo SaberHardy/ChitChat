@@ -1,54 +1,54 @@
 {% extends 'partials/base.html' %}
 
 {% block content %}
-    <div class="container">
-        <div class="row two-divs my-5">
-            <div class="col-4 left-side d-flex align-items-center justify-content-center">
-                <p class="chit-chat-title">
-                    Chit<span>Chat</span>
-                </p>
-                <img src="{{ url_for('static', filename="imgs/logo_image.png") }}" class="image-logo">
-                <p class="enjoy-text">ENJOY!</p>
-                <p class="privacy-text">Privacy policy and terms of service!</p>
-            </div>
+<div class="container">
+    <div class="row two-divs my-5">
+        <div class="col-4 left-side d-flex align-items-center justify-content-center">
+            <p class="chit-chat-title">
+                Chit<span>Chat</span>
+            </p>
+            <img src="{{ url_for('static', filename='imgs/logo_image.png') }}" class="image-logo">
+            <p class="enjoy-text">ENJOY!</p>
+            <p class="privacy-text">Privacy policy and terms of service!</p>
+        </div>
 
-            {#            {{ form.hidden_tag() }}#}
-            {##}
-            {#        {{ form.username.label() }}#}
-            {##}
-            {##}
-            {#        {{ form.password.label() }}#}
-            {#        {{ form.password(class="form-control") }}#}
+        {# {{ form.hidden_tag() }}#}
+        {##}
+        {# {{ form.username.label() }}#}
+        {##}
+        {##}
+        {# {{ form.password.label() }}#}
+        {# {{ form.password(class="form-control") }}#}
 
-            {#        <br>#}
-            {#        {{ form.submit(class='btn btn-success') }}#}
-            <div class="col-8 right-side d-flex flex-column align-items-center justify-content-center">
-                <img src="{{ url_for('static', filename="imgs/logo_image.png") }}" class="image-logo mb-4">
-                <form action="{{ url_for('login') }}" method="post">
-                    {{ form.hidden_tag() }}
-                    <div class="input-group mb-3">
+        {# <br>#}
+        {# {{ form.submit(class='btn btn-success') }}#}
+        <div class="col-8 right-side d-flex flex-column align-items-center justify-content-center">
+            <img src="{{ url_for('static', filename='imgs/logo_image.png') }}" class="image-logo mb-4">
+            <form action="{{ url_for('login') }}" method="post">
+                {{ form.hidden_tag() }}
+                <div class="input-group mb-3">
                     <span class="input-group-text">
                         <i class="bi bi-envelope-fill"></i>
                     </span>
-                        {{ form.username(class="form-control input-sm custom-width",
-                                placeholder="username", type="text") }}
-                        {# <input type="text" class="form-control input-sm custom-width" required>#}
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
-                        {{ form.password(type="password",
-                                class="form-control input-sm custom-width", placeholder="Password") }}
-                        {# <input type="password" class="form-control input-sm custom-width" placeholder="Password"#}
-                        {#                               required>#}
-                    </div>
-                    <div class="text-center">
-                        {{ form.submit(class='btn btn-success') }}
-                    </div>
-                    <p class="register">You Don't Have an Account?
-                        <a href="{{ url_for('register') }}">Register !</a>
-                    </p>
-                </form>
-            </div>
+                    {{ form.username(class="form-control input-sm custom-width",
+                    placeholder="username", type="text") }}
+                    {# <input type="text" class="form-control input-sm custom-width" required>#}
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                    {{ form.password(type="password",
+                    class="form-control input-sm custom-width", placeholder="Password") }}
+                    {# <input type="password" class="form-control input-sm custom-width" placeholder="Password" #}
+                              {# required>#}
+                </div>
+                <div class="text-center">
+                    {{ form.submit(class='btn btn-success') }}
+                </div>
+                <p class="register">You Don't Have an Account?
+                    <a href="{{ url_for('register') }}">Register !</a>
+                </p>
+            </form>
         </div>
     </div>
+</div>
 {% endblock %}

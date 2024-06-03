@@ -13,7 +13,7 @@
 > export FLASK_ENV=development 
 > 
 > export FLASK_APP=application_name.py 
-> flask run
+> flask --app main.py --debug run
 
 > ------------- Server Error -------------
 > 
