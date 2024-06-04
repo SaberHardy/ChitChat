@@ -408,3 +408,12 @@ input[type=text] {
     color: #91dbe8;
     font-size: 20px;
 }
+
+.status-dropdown {
+    padding: 10px;
+    width: 150px;
+    border: 0;
+    border-radius: 10px;
+     opacity:25% ;
+
+}
