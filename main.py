@@ -1,7 +1,7 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import current_user, login_required, LoginManager, login_user, logout_user
 
-from forms.forms import LoginForm
+from forms.forms import LoginForm, UserForm
 from models.models import UsersModel, db  # , MessagesModel
 from werkzeug.security import check_password_hash
 from flask_migrate import Migrate
@@ -148,9 +148,32 @@ def chat_users():
     return render_template('chit_chat/chat_users.html')
 
 
-@app.route('/user_profile/<user_id>', methods=['POST', 'GET'])
+@app.route('/user_details/<int:user_id>', methods=['POST', 'GET'])
 def user_profile(user_id):
-    return render_template('chit_chat/user_profile.html')
+    user = UsersModel.query.get_or_404(user_id)
+    return render_template('chit_chat/user_profile.html', user=user)
+
+
+@app.route('/update_user/<int:user_id>', methods=['POST', 'GET'])
+def update_user_profile(user_id):
+    form = UserForm()
+    user_to_update = UsersModel.query.get_or_404(user_id)
+    if request.method == "POST":
+        user_to_update.username = request.form['username']
+        user_to_update.phone_number = request.form['phone_number']
+        user_to_update.city = request.form['city']
+        user_to_update.street = request.form['street']
+        user_to_update.email = request.form['email']
+        user_to_update.connected = request.form['connected']
+        try:
+            db.session.commit()
+            flash("User updated successfully!")
+            return render_template("chit_chat/update_user.html", form=form, user_to_update=user_to_update)
+        except:
+            flash("The User didn't updated successfully!")
+
+    else:
+        return render_template("chit_chat/update_user.html", form=form, user_to_update=user_to_update)
 
 
 if __name__ == '__main__':

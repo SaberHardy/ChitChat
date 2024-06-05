@@ -9,33 +9,42 @@
         <p>{{ current_user.email|upper }}</p>
     </div>
     <div class="profile-details">
-        <form class="status-form" method="post" action="">
-            <div>
-                <span>Phone Number:</span>
-                <p>(123) 456-7890</p>
-            </div>
-            <div>
-                <span>Street Address:</span>
-                <p>123 Main St</p>
-            </div>
-            <div>
-                <span>City, State, ZIP:</span>
-                <p>Springfield, IL 62701</p>
-            </div>
-            <div>
-                <span>Date of Birth:</span>
-                <p>January 1, 1990</p>
-            </div>
-            <div>
-                <span>Status</span>
-                <select name="status" class="status-dropdown">
-                    <option value="online">Online</option>
-                    <option value="offline">Offline</option>
-                </select>
-            </div>
-            <a href="" class="btn btn-danger text-center">Cancel</a>
-            <a href="" class="btn btn-info text-center">Submit</a>
-        </form>
+        <div>
+            <span>User Name</span>
+            <p>{{ current_user.username }}</p>
+        </div>
+        <div>
+            <span>Name</span>
+            <p>{{ current_user.name }}</p>
+        </div>
+        <div>
+            <span>Phone Number</span>
+            <p>{{ current_user.phone_number }}</p>
+        </div>
+        <div>
+            <span>Street</span>
+            <p>{{ current_user.street }}</p>
+        </div>
+        <div>
+            <span>City</span>
+            <p>{{ current_user.city }}</p>
+        </div>
+        <div>
+            <span>Email</span>
+            <p>{{ current_user.email }}</p>
+        </div>
+        <!--            <div>-->
+        <!--                <span>Date of Birth:</span>-->
+        <!--                <p>January 1, 1990</p>-->
+        <!--            </div>-->
+        <div>
+            <span>Status</span>
+            <select name="status" class="status-dropdown">
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+            </select>
+        </div>
+        <a href="{{ url_for('update_user_profile', user_id=current_user.id) }}">Update Your Profile</a>
     </div>
 </div>
 

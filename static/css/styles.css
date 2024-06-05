@@ -264,6 +264,10 @@ input[type=text] {
     color: greenyellow;
 }
 
+.offline-circle {
+    color: red;
+}
+
 .right-side-logo p {
     font-size: 50px;
     font-weight: bold;
@@ -415,5 +419,5 @@ input[type=text] {
     border: 0;
     border-radius: 10px;
      opacity:25% ;
-
 }
+
