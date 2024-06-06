@@ -7,6 +7,11 @@
         <div class="dropdown">
             <img class="user-logo-img" src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}"
                  onclick="toggleDropdown()">
+            {% if current_user.connected %}
+                <i class="bi bi-circle-fill online-circle"></i>
+                {% else %}
+                <i class="bi bi-circle-fill offline-circle"></i>
+                {% endif%}
             <div id="dropdownMenu" class="dropdown-content">
                 {% if current_user.is_authenticated %}
                 <a href="{{ url_for('user_profile', user_id=current_user.id) }}">Profile</a>

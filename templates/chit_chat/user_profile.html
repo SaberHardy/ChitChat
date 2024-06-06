@@ -33,16 +33,15 @@
             <span>Email</span>
             <p>{{ current_user.email }}</p>
         </div>
-        <!--            <div>-->
-        <!--                <span>Date of Birth:</span>-->
-        <!--                <p>January 1, 1990</p>-->
-        <!--            </div>-->
         <div>
             <span>Status</span>
-            <select name="status" class="status-dropdown">
-                <option value="online">Online</option>
-                <option value="offline">Offline</option>
-            </select>
+            <p>
+                {% if current_user.connected %}
+                Online
+                {% else %}
+                Offline
+                {% endif %}
+            </p>
         </div>
         <a href="{{ url_for('update_user_profile', user_id=current_user.id) }}">Update Your Profile</a>
     </div>

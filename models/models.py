@@ -16,7 +16,7 @@ class UsersModel(db.Model, UserMixin):
     email = db.Column(db.String(100), nullable=False, unique=True)
     password_hash = db.Column(db.String(255))
     date_added = db.Column(db.DateTime, default=datetime.utcnow)
-    connected = db.Column(db.Boolean, default=False, nullable=False)
+    connected = db.Column(db.Boolean, default=True, nullable=False)
 
     @property
     def password(self):

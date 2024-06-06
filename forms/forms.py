@@ -1,6 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, PasswordField
-from wtforms.validators import DataRequired
+from wtforms.fields.choices import SelectField
+from wtforms.validators import DataRequired, Email
 
 
 class LoginForm(FlaskForm):
@@ -10,10 +11,12 @@ class LoginForm(FlaskForm):
 
 
 class UserForm(FlaskForm):
-    username = StringField("username", )
-    name = StringField("name", )
-    phone_number = StringField("phone_number", )
-    city = StringField("city", )
-    street = StringField("street", )
-    email = StringField("email", )
-    submit = SubmitField("Submit")
+    username = StringField('Username', validators=[DataRequired()])
+    name = StringField('Name', validators=[DataRequired()])
+    phone_number = StringField('Phone Number', validators=[DataRequired()])
+    street = StringField('Street', validators=[DataRequired()])
+    city = StringField('City', validators=[DataRequired()])
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    # connected = SelectField('Status', choices=[('online', 'Online'), ('offline', 'Offline')])
+    connected = SelectField('Status', choices=[(True, 'Online'), (False, 'Offline')], coerce=lambda x: x == 'True')
+    submit = SubmitField('Submit')

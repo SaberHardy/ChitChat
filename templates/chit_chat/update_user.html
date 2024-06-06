@@ -9,41 +9,40 @@
         <p>{{ current_user.email|upper }}</p>
     </div>
     <div class="profile-details">
-        <form class="status-form" method="post" action="">
+        <form class="status-form" method="post" action="{{ url_for('update_user_profile', user_id=current_user.id) }}">
+            {{ form.hidden_tag() }}
             <div>
                 <span>User Name</span>
-                <p>{{ current_user.username }}</p>
+                <p>{{ form.username(class='form-control', value=user_to_update.username) }}</p>
             </div>
             <div>
                 <span>Name</span>
-                <p>{{ current_user.name }}</p>
+                <p>{{ form.name(class='form-control', value=user_to_update.name) }}</p>
             </div>
             <div>
                 <span>Phone Number</span>
-                <p>{{ current_user.phone_number }}</p>
+                <p>{{ form.phone_number(class='form-control', value=user_to_update.phone_number) }}</p>
             </div>
             <div>
                 <span>Street</span>
-                <p>{{ current_user.street }}</p>
+                <p>{{ form.street(class='form-control', value=user_to_update.street) }}</p>
             </div>
             <div>
                 <span>City</span>
-                <p>{{ current_user.city }}</p>
+                <p>{{ form.city(class='form-control', value=user_to_update.city) }}</p>
             </div>
             <div>
                 <span>Email</span>
-                <p>{{ current_user.email }}</p>
+                <p>{{ form.email(class='form-control', value=user_to_update.email) }}</p>
             </div>
-
             <div>
                 <span>Status</span>
-                <select name="status" class="status-dropdown">
-                    <option value="online">Online</option>
-                    <option value="offline">Offline</option>
-                </select>
+                <p>{{ form.connected(class='form-control', value=user_to_update.connected) }}</p>
             </div>
-            <a href="" class="btn btn-danger text-center">Cancel</a>
-            <a href="" class="btn btn-info text-center">Submit</a>
+            <a href="{{ url_for('update_user_profile', user_id=current_user.id) }}" class="btn btn-danger text-center">
+                Cancel
+            </a>
+            <button type="submit" class="btn btn-info text-center">Submit</button>
         </form>
     </div>
 </div>

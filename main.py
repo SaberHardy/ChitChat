@@ -158,22 +158,25 @@ def user_profile(user_id):
 def update_user_profile(user_id):
     form = UserForm()
     user_to_update = UsersModel.query.get_or_404(user_id)
+
     if request.method == "POST":
         user_to_update.username = request.form['username']
+        user_to_update.name = form.name.data
         user_to_update.phone_number = request.form['phone_number']
         user_to_update.city = request.form['city']
         user_to_update.street = request.form['street']
         user_to_update.email = request.form['email']
-        user_to_update.connected = request.form['connected']
+        user_to_update.connected = form.connected.data
+
         try:
             db.session.commit()
             flash("User updated successfully!")
-            return render_template("chit_chat/update_user.html", form=form, user_to_update=user_to_update)
+            return redirect(url_for('welcome'))
         except:
-            flash("The User didn't updated successfully!")
+            flash("The User didn't update successfully!")
+            return render_template("chit_chat/update_user.html", form=form, user_to_update=user_to_update)
 
-    else:
-        return render_template("chit_chat/update_user.html", form=form, user_to_update=user_to_update)
+    return render_template("chit_chat/update_user.html", form=form, user_to_update=user_to_update)
 
 
 if __name__ == '__main__':
