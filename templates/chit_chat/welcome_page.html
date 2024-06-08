@@ -33,7 +33,7 @@
             <div class="info-users">
                 <div class="img-full-name">
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <a href="" class="full-name-tag">{{ user.username|title }} {{ user.id }}</a>
+                    <a href="{{ url_for('chat_users') }}" class="full-name-tag">{{ user.username|title }}</a>
                 </div>
                 {% if user.connected %}
                 <i class="bi bi-circle-fill online-circle"></i>
