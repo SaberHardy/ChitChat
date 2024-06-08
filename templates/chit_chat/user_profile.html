@@ -48,6 +48,10 @@
        href="{{ url_for('update_user_profile', user_id=current_user.id) }}">
         Update Your Profile
     </a>
+    <a class="btn btn-danger float-right mt-3"
+       href="{{ url_for('welcome') }}">
+        Back Home
+    </a>
 </div>
 
 {% endif %}
