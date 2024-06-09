@@ -178,24 +178,28 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Added */
     background-color: white;
     height: 95%;
     border-radius: 20px;
-    width: 76%;
+    width: 90%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+    padding: 10px; /* Optional: Add some padding */
+    box-sizing: border-box;
 }
+
 .right-side-logo {
 
 }
 .user-pack-details {
-    background-color: red;
+    /*background-color: red;*/
     padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     border-radius: 50px;
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 
 .user-pack-details .user-img-profile {
@@ -205,14 +209,28 @@ body, html {
 }
 
 .user-pack-details .message-sent {
+    font-size: 17px;
+}
 
-    font-size: 20px;
+.user-pack-details .message-receive {
+    font-size: 17px;
 }
 
 .user-pack-details span {
     margin: 20px;
 }
 
+.message-receive, .message-sent {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.message-sent {
+    background-color: #d1e7dd;
+    text-align: right;
+}
 
 input[type=text] {
     box-sizing: border-box;
@@ -452,4 +470,3 @@ input[type=text] {
     border-radius: 10px;
      opacity:25% ;
 }
-
