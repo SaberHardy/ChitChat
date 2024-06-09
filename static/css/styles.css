@@ -203,7 +203,7 @@ body, html {
 }
 
 .user-pack-details .user-img-profile {
-    height: 100px;
+    height: 60px;
     border-radius: 50%;
     margin: 20px;
 }
@@ -235,10 +235,10 @@ body, html {
 input[type=text] {
     box-sizing: border-box;
     width: 300px;
-    border: none;
+    border: black;
     border-radius: 20px;
     font-size: 16px;
-    background-color: white;
+    background-color: #cdfeff;
     background-position: 10px 10px;
     background-repeat: no-repeat;
     /*padding: 12px 20px 12px 40px;*/
@@ -470,3 +470,21 @@ input[type=text] {
     border-radius: 10px;
      opacity:25% ;
 }
+
+.input-send-btn {
+    display:flex;
+    flex-direction: row;
+}
+
+.input-send-btn .input-message {
+    padding: 20px;
+    width: 100%;
+    border: black;
+}
+
+.input-send-btn .send-message{
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
