@@ -145,7 +145,8 @@ def all_users():
 
 @app.route('/chat_users', methods=['POST', 'GET'])
 def chat_users():
-    return render_template('chit_chat/chat_users.html')
+    users = UsersModel.query.all()
+    return render_template('chit_chat/chat_users.html', users=users)
 
 
 @app.route('/user_details/<int:user_id>', methods=['POST', 'GET'])

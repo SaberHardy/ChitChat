@@ -10,96 +10,24 @@
         </form>
         <div class="online-users">
             <span>Online users</span>
-            <span>3</span>
+            <span>{{ all_users|count }}</span>
         </div>
 
         <div class="users-online-info">
+            {% for user in users %}
             <div class="info-users">
                 <div class="img-full-name">
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p class="text-center">full name</p>
+                    <a href="{{ url_for('chat_users') }}" class="full-name-tag">{{ user.username|title }}</a>
                 </div>
-                <i class="bi bi-circle-fill"></i>
+                {% if user.connected %}
+                <i class="bi bi-circle-fill online-circle"></i>
+                {% else %}
+                <i class="bi bi-circle-fill offline-circle"></i>
+                {% endif%}
             </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p>full name</p>
-                </div>
-                <span>13 min</span>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p class="text-center">full name</p>
-                </div>
-                <i class="bi bi-circle-fill"></i>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p>full name</p>
-                </div>
-                <span>13 min</span>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p class="text-center">full name</p>
-                </div>
-                <i class="bi bi-circle-fill"></i>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p>full name</p>
-                </div>
-                <span>13 min</span>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p class="text-center">full name</p>
-                </div>
-                <i class="bi bi-circle-fill"></i>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p>full name</p>
-                </div>
-                <span>13 min</span>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p class="text-center">full name</p>
-                </div>
-                <i class="bi bi-circle-fill"></i>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p>full name</p>
-                </div>
-                <span>13 min</span>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p class="text-center">full name</p>
-                </div>
-                <i class="bi bi-circle-fill"></i>
-            </div>
-            <div class="info-users">
-                <div class="img-full-name">
-                    <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <p>full name</p>
-                </div>
-                <span>13 min</span>
-            </div>
+            {% endfor %}
         </div>
-
         <div class="online-users">
             <span>Groups</span>
             <span>dd</span>
@@ -110,35 +38,35 @@
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
                     <p>Group Name</p>
                 </div>
-                <i class="bi bi-circle-fill"></i>
+                <span>3</span>
             </div>
             <div class="info-users">
                 <div class="img-full-name">
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
                     <p>Group Name</p>
                 </div>
-                <i class="bi bi-circle-fill"></i>
+                <span>245</span>
             </div>
             <div class="info-users">
                 <div class="img-full-name">
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
                     <p>Group Name</p>
                 </div>
-                <i class="bi bi-circle-fill"></i>
+                <span>24</span>
             </div>
             <div class="info-users">
                 <div class="img-full-name">
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
                     <p>Group Name</p>
                 </div>
-                <i class="bi bi-circle-fill"></i>
+                <span>30</span>
             </div>
             <div class="info-users">
                 <div class="img-full-name">
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
                     <p>Group Name</p>
                 </div>
-                <i class="bi bi-circle-fill"></i>
+                <span>2998</span>
             </div>
         </div>
     </div>

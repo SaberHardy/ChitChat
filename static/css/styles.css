@@ -178,21 +178,18 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: white;
     height: 95%;
     border-radius: 20px;
-    width: 90%;
+    width: 80%;
     overflow-y: auto; /* Enable vertical scrolling */
     border: 1px solid #ccc; /* Optional: Add a border for better visibility */
     padding: 10px; /* Optional: Add some padding */
     box-sizing: border-box;
 }
 
-.right-side-logo {
-
-}
 .user-pack-details {
-    /*background-color: red;*/
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -325,12 +322,6 @@ input[type=text] {
     color: orange;
     font-weight: bolder;
 }
-
-/*
-.right-side-logo img {
-    width: 70%;
-}
-*/
 
 .users-online-info::-webkit-scrollbar {
     background-color: transparent;
@@ -471,7 +462,7 @@ input[type=text] {
      opacity:25% ;
 }
 
-.input-send-btn {
+.message-container .input-send-btn {
     display:flex;
     flex-direction: row;
 }
