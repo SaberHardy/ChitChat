@@ -1,0 +1,15 @@
+{% extends 'partials/base.html' %}
+
+{% block content %}
+<div class="main-container mx-5 my-5">
+    <div class="left-user-logo">
+        <p style="color: white;">This is a message part</p>
+        {% for message in messages %}
+        <p style="color: white;">{{ message.sender_id }}</p>
+        <p style="color: white;">{{ message.receiver_id }}</p>
+        <p style="color: white;">{{ message.message_content }}</p>
+        <p style="color: white;">{{ message.timestamp }}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

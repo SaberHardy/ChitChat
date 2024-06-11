@@ -186,7 +186,9 @@
             </div>
 
             <div class="input-send-btn">
-                <input class="input-message" type="text" placeholder="Type your text here">
+                <input type="hidden" id="sender_id" value="1">
+                <input type="hidden" id="receiver_id" value="2">
+                <input class="input-message" name="message_to_send" type="text" placeholder="Type your text here">
                 <a class="send-message" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                          class="bi bi-send" viewBox="0 0 20 20">
@@ -194,6 +196,7 @@
                     </svg>
                 </a>
             </div>
+
         </div>
     </div>
 

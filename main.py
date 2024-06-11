@@ -1,8 +1,10 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from datetime import datetime
+
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 from flask_login import current_user, login_required, LoginManager, login_user, logout_user
 
 from forms.forms import LoginForm, UserForm
-from models.models import UsersModel, db  # , MessagesModel
+from models.models import UsersModel, db, MessagesModel  # , MessagesModel
 from werkzeug.security import check_password_hash
 from flask_migrate import Migrate
 
@@ -178,6 +180,37 @@ def update_user_profile(user_id):
             return render_template("chit_chat/update_user.html", form=form, user_to_update=user_to_update)
 
     return render_template("chit_chat/update_user.html", form=form, user_to_update=user_to_update)
+
+
+@app.route('/messages', methods=['POST', 'GET'])
+def messages_between_users():
+    if request.method == 'POST':
+        # getting the data that have been sent from the user as a json format
+        data = request.get_json()
+
+        sender_id = data['sender_id']
+        receiver_id = data['receiver_id']
+        message_content = data['message_content']
+
+        # Print received data to console
+        print(f"Sender ID: {sender_id}")
+        print(f"Receiver ID: {receiver_id}")
+        print(f"Message Content: {message_content}")
+
+        new_message = MessagesModel(
+            sender_id=sender_id,
+            receiver_id=receiver_id,
+            message_content=message_content,
+            timestamp=datetime.utcnow()
+        )
+        db.session.add(new_message)
+        db.session.commit()
+
+        return jsonify({"message": "Message sent successfully"}), 201
+
+    elif request.method == 'GET':
+        messages = MessagesModel.query.all()
+        return render_template("chit_chat/messages_sent.html", messages=messages)
 
 
 if __name__ == '__main__':
