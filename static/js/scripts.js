@@ -22,7 +22,17 @@ window.onclick = function(event) {
 }
 
 // ---------------- Functions for handling messages --------------
-function send_message(sender_id, receiver_id, message_content) {
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelector('.send-message').addEventListener('click', function() {
+        let sender_id = document.getElementById('sender_id').value;
+        let receiver_id = document.getElementById('receiver_id').value;
+        let message_content = document.querySelector('.input-message').value;
+
+        send_name(sender_id, receiver_id, message_content);
+    });
+});
+
+function send_name(sender_id, receiver_id, message_content) {
     let message_to_send = {
         sender_id: sender_id,
         receiver_id: receiver_id,
@@ -44,13 +54,3 @@ function send_message(sender_id, receiver_id, message_content) {
     });
     console.log("was sent");
 }
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    document.querySelector('.send-message').addEventListener('click', function() {
-        let sender_id = document.getElementById('sender_id').value;
-        let receiver_id = document.getElementById('receiver_id').value;
-        let message_content = document.querySelector('.input-message').value;
-
-        send_message(sender_id, receiver_id, message_content);
-    });
-});

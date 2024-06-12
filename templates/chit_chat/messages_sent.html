@@ -8,7 +8,7 @@
         <p style="color: white;">{{ message.sender_id }}</p>
         <p style="color: white;">{{ message.receiver_id }}</p>
         <p style="color: white;">{{ message.message_content }}</p>
-        <p style="color: white;">{{ message.timestamp }}</p>
+        <p style="color: white;">{{ message.timestamp.strftime('%m-%d-%Y') }}</p>
         {% endfor %}
     </div>
 </div>

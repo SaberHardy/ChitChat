@@ -183,11 +183,10 @@ def update_user_profile(user_id):
 
 
 @app.route('/messages', methods=['POST', 'GET'])
+@login_required
 def messages_between_users():
     if request.method == 'POST':
-        # getting the data that have been sent from the user as a json format
         data = request.get_json()
-
         sender_id = data['sender_id']
         receiver_id = data['receiver_id']
         message_content = data['message_content']
@@ -209,8 +208,19 @@ def messages_between_users():
         return jsonify({"message": "Message sent successfully"}), 201
 
     elif request.method == 'GET':
-        messages = MessagesModel.query.all()
-        return render_template("chit_chat/messages_sent.html", messages=messages)
+        receiver_id = request.args.get('receiver_id')
+        print(f"reciever id is : {receiver_id}")
+        if not receiver_id:
+            return "Receiver ID is required", 400
+
+        all_messages = (MessagesModel.query.filter(
+            ((MessagesModel.sender_id == current_user.id) & (MessagesModel.receiver_id == receiver_id)) |
+            ((MessagesModel.sender_id == receiver_id) & (MessagesModel.receiver_id == current_user.id)))
+                        .order_by(MessagesModel.timestamp).all())
+
+        return render_template("chit_chat/messages_sent.html",
+                               all_messages=all_messages,
+                               receiver_id=receiver_id)
 
 
 if __name__ == '__main__':
