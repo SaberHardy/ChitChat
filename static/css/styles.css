@@ -20,6 +20,7 @@ body, html {
 
 .two-divs {
     background-color: #ffffff;
+    border-radius: 40px
 }
 
 .left-side {
