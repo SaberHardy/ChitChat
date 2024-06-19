@@ -223,5 +223,16 @@ def messages_between_users():
                                receiver_id=receiver_id)
 
 
+@app.route('/messages_between/<int:user1_id>/<int:user2_id>', methods=['POST', 'GET'])
+def get_messages_between_users(user1_id, user2_id):
+    messages = MessagesModel.query.filter(
+        ((MessagesModel.sender_id == user1_id) & (MessagesModel.receiver_id == user2_id)) |
+        ((MessagesModel.sender_id == user2_id) & (MessagesModel.receiver_id == user1_id))
+    ).order_by(MessagesModel.timestamp).all()
+
+    return render_template("chit_chat/all_messages_from_users.html",
+                           messages=messages)
+
+
 if __name__ == '__main__':
     app.run()
