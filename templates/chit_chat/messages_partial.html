@@ -1,0 +1,6 @@
+{% for message in all_messages %}
+<div class="message {% if message.sender_id == current_user.id %}sent{% else %}received{% endif %}">
+    <p>{{ message.message_content }}</p>
+    <span class="timestamp">{{ message.timestamp }}</span>
+</div>
+{% endfor %}

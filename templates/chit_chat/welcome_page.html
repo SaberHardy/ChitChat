@@ -8,8 +8,10 @@
             <div>
                 <img class="user-logo-img" src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}"
                      onclick="toggleDropdown()">
-                <h3 class="">{{ current_user.username|title }} <i class="bi bi-circle-fill online-circle"></i></h3>
-
+                <h3 class="" style="color:white; ">
+                    {{ current_user.username|title }} - id= {{ current_user.id }}
+                    <i class="bi bi-circle-fill online-circle"></i>
+                </h3>
             </div>
 
             {% if current_user.connected %}
@@ -37,7 +39,7 @@
             <div class="info-users">
                 <div class="img-full-name">
                     <img src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
-                    <a href="{{ url_for('get_messages_between_users', user1_id= current_user.id, user2_id=user.id ) }}"
+                    <a href="javascript:void(0);" onclick="loadChat({{ current_user.id }}, {{ user.id }})"
                        class="full-name-tag">
                         {{ user.username|title }} - {{ user.id }}
                     </a>
@@ -94,9 +96,20 @@
     </div>
 
     <div class="right-side-logo">
-        <p class="">You are welcome {{ current_user.username|title }}!</p>
-        <img src="{{ url_for('static', filename='imgs/logo_image.png') }}">
-        <p>This platform is made by <span>TWS</span></p>
+        <div id="chat-container">
+            <!-- Chat messages will be loaded here -->
+        </div>
+        <div class="input-send-btn" style="display: none;">
+            <input type="hidden" id="sender_id" value="{{ current_user.id }}">
+            <input type="hidden" id="receiver_id">
+            <input class="input-message" name="message_to_send" type="text" placeholder="Type your text here">
+            <a class="send-message" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                     class="bi bi-send" viewBox="0 0 20 20">
+                    <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
+                </svg>
+            </a>
+        </div>
     </div>
 
 
