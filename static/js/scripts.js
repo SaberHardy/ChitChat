@@ -23,6 +23,7 @@ window.onclick = function(event) {
 // ---------------- Functions for handling messages --------------
 document.addEventListener('DOMContentLoaded', (event) => {
     document.querySelector('.send-message').addEventListener('click', function() {
+        event.preventDefault();
         let sender_id = document.getElementById('sender_id').value;
         let receiver_id = document.getElementById('receiver_id').value;
         let message_content = document.querySelector('.input-message').value;
