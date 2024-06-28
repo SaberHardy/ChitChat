@@ -67,6 +67,7 @@ function loadChat(sender_id, receiver_id) {
             $('#receiver_id').val(receiver_id);
             $('.input-send-btn').show();
             $('.profile-section').removeClass('hidden-section');
+            $('.welcome-text').addClass('hidden-section');
         },
         error: function(error) {
             console.error("Error loading chat:", error);
