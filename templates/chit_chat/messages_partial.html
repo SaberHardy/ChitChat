@@ -1,6 +1,24 @@
 {% for message in all_messages %}
-<div class="message {% if message.sender_id == current_user.id %}sent{% else %}received{% endif %}">
-    <p>{{ message.message_content }}</p>
-    <span class="timestamp">{{ message.timestamp }}</span>
+        <div class="message {% if message.sender_id == current_user.id %}sent{% else %}received{% endif %}">
+            <div class="user-pack-details">
+                <img class="user-img-profile" src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
+                <p class="message-receive">
+                    {{ message.message_content }}
+                </p>
+                <span>{{ message.timestamp }}</span>
+            </div>
+            <div class="user-pack-details my-3">
+                <span>13:33pm</span>
+                <p class="message-sent">
+                    this is a message sent by the user....!
+                    this is a message sent by the user....!
+                    this is a message sent by the user....!
+                    this is a message sent by the user....!
+                    this is a message sent by the user....!
+                    this is a message sent by the user....!
+                    this is a message sent by the user....!
+                </p>
+                <img class="user-img-profile" src="{{ url_for('static', filename='imgs/chitchat_logo.jpg') }}">
+            </div>
 </div>
 {% endfor %}
